@@ -5,16 +5,9 @@ permalink: /about/
 tags: about
 ---
 
-This Jekyll theme was crafted with <3 by [John Otander](http://johnotander.com)
-([@4lpine](https://twitter.com/4lpine)).
+I'm Ikuto, 27, and I'd like to do programming like breathing naturally.
+I lately focus on Angular2 or more, Nativescript and Ruby on Rails. I began programming because I wanted to get power that put my idea on real anytime I hit upon a good idea.
 
-Checkout the [Github repository](https://github.com/johnotander/pixyll) to download it,
-request a feature, report a bug, or contribute. It's free, and open source
-([MIT](http://opensource.org/licenses/MIT)).
+I'm currently learning about programming at ITD Canada (It's one of college) in Vancouver. And I'll work as programmer in Vancouver for 2 years using Co-op program and working holiday Visa from 2017 April.
 
-Thanks to the following:
-
-* [BASSCSS](http://basscss.com)
-* [Jekyll](http://jekyllrb.com)
-* [Refills](http://refills.bourbon.io/)
-* [Type Scale](http://type-scale.com/)
+I had worked as programmer for 4 years in Japan before came Vancouver. I was using Ruby on Rails, C++ and Java.
