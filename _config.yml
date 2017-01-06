@@ -17,9 +17,9 @@ google_tag_manager:
 bing_verification:
 
 # Optional features
-animated:             false
-show_related_posts:   false
-show_post_footers:    false
+animated:             true
+show_related_posts:   true
+show_post_footers:    true
 show_social_icons:    false
 ajaxify_contact_form: false
 enable_mathjax: false
@@ -42,14 +42,14 @@ facebook_appid:
 facebook_comments_number: 10
 
 # Social icons
-github_username:
+github_username: ikuto0608
 bitbucket_username:
 stackoverflow_id:
-twitter_username:
+twitter_username: ikuto0608
 skype_username:
 steam_nickname:
 google_plus_id:
-linkedin_username:
+linkedin_username: ikutoyata
 angellist_username:
 medium_id:
 bitcoin_url:
