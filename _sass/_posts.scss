@@ -1,12 +1,13 @@
 .posts {
-  margin: 0 auto;
-  display: block;
+  margin: 0;
 }
 
 .posts .post {
   margin-bottom: 0.75em;
   border-bottom: thin solid #f3f3f3;
   width: 60%;
+  margin: 0 auto;
+  display: block;
 }
 
 .posts .post:last-child {
