@@ -42,17 +42,58 @@
   .social-icons-right {
     text-align: right;
   }
+
+  footer div {
+    display: block;
+  }
+
+  .footer-left {
+    padding-bottom: $space-1;
+  }
+
+  .footer-right {
+    padding-top: .8rem;
+  }
 }
 
 @media screen and (min-width: $viewport-medium) {
   html {
     font-size: 18px;
   }
+
+  footer div {
+    display: block;
+  }
+
+  .footer-left {
+    padding-bottom: $space-1;
+    float: none;
+  }
+
+  .footer-right {
+    padding: 0;
+    padding-top: .7rem;
+    float: none;
+  }
 }
 
 @media screen and (min-width: $viewport-large) {
   html {
     font-size: 20px;
+  }
+
+  footer div {
+    display: inline-block;
+  }
+
+  .footer-left {
+    float: left;
+    padding: $space-2;
+  }
+
+  .footer-right {
+    float: right;
+    padding: $space-2;
   }
 }
 
