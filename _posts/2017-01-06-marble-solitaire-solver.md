@@ -12,7 +12,7 @@ It was happy new year! I was solving Marble solitaire during this Christmas holi
 ### What is Marble solitaire?
 
 Here's a image of Marble solitaire.
-![desk](https://github.com/ikuto0608/marble_game_solver/blob/master/images/sample1.jpg?raw=true)
+![marble](https://github.com/ikuto0608/marble_game_solver/blob/master/images/sample1.jpg?raw=true)
 
 First of all, you remove center marble, then start the game.
 You only can across marbles into an empty space.
@@ -94,5 +94,5 @@ Then I improved it, it takes 2 minutes finally!
 As you saw, the field of game has symmetry. The shape is same as rotated 90, 180 and 270 degrees. And invert it as well.
 It means you can zip patterns to one over eight! That's what I did.
 Here is my final code. Let me know if there is more faster way!
-https://github.com/ikuto0608/marble_game_solver
+![https://github.com/ikuto0608/marble_game_solver](https://github.com/ikuto0608/marble_game_solver)
 ---
