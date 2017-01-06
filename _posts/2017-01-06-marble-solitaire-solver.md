@@ -94,4 +94,4 @@ Then I improved it, it takes 2 minutes finally!
 As you saw, the field of game has symmetry. The shape is same as rotated 90, 180 and 270 degrees. And invert it as well.
 It means you can zip patterns to one over eight! That's what I did.
 Here is my final code. Let me know if there is more faster way!
-![https://github.com/ikuto0608/marble_game_solver](https://github.com/ikuto0608/marble_game_solver)
+[https://github.com/ikuto0608/marble_game_solver](https://github.com/ikuto0608/marble_game_solver)
