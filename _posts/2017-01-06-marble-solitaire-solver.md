@@ -15,7 +15,7 @@ Here's a image of Marble solitaire.
 ![marble](https://github.com/ikuto0608/marble_game_solver/blob/master/images/sample1.jpg?raw=true)
 
 First of all, you remove the center marble, then start the game.
-You only can cross marbles into an empty space.
+You only can jump across marbles into an empty space.
 Remove the marble you just jumped over.
 Then when you get only one marble, you'll complete the game.
 Pretty simple game, eh? But honestly, I couldn't solve it by myself. So I changed my mind to solve it with programming!
