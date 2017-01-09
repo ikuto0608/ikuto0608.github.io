@@ -84,12 +84,12 @@ end
 ## Second approach
 
 The first time, I didn't record each case of the field. So even if the program gets the same case as before, it won't skip it. So my second approach is to record each case in the database. (I actually got the idea from my friend. Thanks a million.)
-Then the program solved it! It took about 10 minutes.
+Then the program solved it! It took about 10 hours.
 
 ## Third approach
 
 Once it solved the game, I literally moved the marbles following the steps in my program. Yeah, it's solved!
-But it still takes 10 minutes to solve. So long ...
+But it still takes 10 hours to solve. So long ...
 After I improved it, it finally took only 2 minutes!
 As you can see, the field of the game has symmetry. The shape is the same rotated 90, 180 and 270 degrees, and inverted as well.
 This means you can zip patterns to one over eight! That's what I did.
