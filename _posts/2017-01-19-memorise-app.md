@@ -3,7 +3,7 @@ layout:     post
 title:      Memorise App
 date:       2017-01-19 02:34:29
 summary:    I'm going to publish my Memorise app.
-categories: Nativescript, Angular2, Rails
+categories: Nativescript Angular2 Rails
 ---
 
 The app is for memorizing words, sentence and so on.

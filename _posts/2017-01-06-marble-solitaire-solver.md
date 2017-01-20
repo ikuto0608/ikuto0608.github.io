@@ -3,7 +3,7 @@ layout:     post
 title:      Marble solitaire solver
 date:       2017-01-06 02:34:29
 summary:    This is how I solved Marble solitaire with ruby.
-categories: Ruby
+categories: Ruby Marble Solver
 ---
 
 It was a happy new year! I was solving Marble solitaire during the Christmas holidays. I'm going to explain how I solved Marble solitaire with ruby.
