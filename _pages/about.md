@@ -1,8 +1,7 @@
 ---
 layout: page
-title: Who am I?
+title: About
 permalink: /about/
-tags: about
 ---
 
 ### I'm a Ruby on Rails / AngularJS 2 developer in Vancouver.
