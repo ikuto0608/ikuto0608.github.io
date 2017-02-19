@@ -4,22 +4,21 @@ title: About
 permalink: /about/
 ---
 
-### I'm a Ruby on Rails / AngularJS 2 developer in Vancouver.
+## I'm a Ruby on Rails / AngularJS 2 developer in Vancouver.
 
-I'm Ikuto, 27, and I'd like to do programming like breathing naturally.
-I lately focus on Ruby on Rails and Angular2. I began programming because I wanted to get power that put my idea on real anytime I hit upon a good idea.
+I'm Ikuto, 27, and I'd like to be able to do programming like breathing naturally.
+Lately, I've focused on Ruby on Rails and AngularJS 2. I began programming because I wanted to have the power to make my ideas real, anytime I hit upon a good idea.
 
-### I built memorizing app.
+### I built a memorizing app.
 
-I have an own project which is [hybrid application](https://memoriseword.com/) for memorizing words. It's based on Ruby on Rails, Nativescript and Angular2.
+I have my own project which is [hybrid application](https://memoriseword.com/) for memorizing words. It's based on Ruby on Rails, Nativescript and Angular2.
 * [Mobile client repositry](https://github.com/ikuto0608/mwa_client_mobile)
 * [Web client repositry](https://github.com/ikuto0608/mwa_client)
 * [Server repositry](https://github.com/ikuto0608/mwa_server)
 
 ### Learning AI is my next stage.
 
-I believe people can write programming like using own language near future. So
-I want new rare skill. Then I started to learn neural network and deep learning.
+I expect people will be able to do programming as though speaking their native language in the near future. So I want a new rare skill. I've started to learn Neural Network and Deep Learning.
 
 ### More
 
