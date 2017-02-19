@@ -17,6 +17,7 @@ You can also make an exam and share your nice exam!
 
 Let's start it!
 
-```html
-<a class="ui bottom right floated button ios" href="https://itunes.apple.com/ca/app/memorise/id1196642316?mt=8" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;"></a>
-```
+* [Memorise](https://memoriseword.com/)
+* [Mobile client repositry](https://github.com/ikuto0608/mwa_client_mobile)
+* [Web client repositry](https://github.com/ikuto0608/mwa_client)
+* [Server repositry](https://github.com/ikuto0608/mwa_server)
