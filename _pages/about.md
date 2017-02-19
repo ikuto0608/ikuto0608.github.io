@@ -12,6 +12,7 @@ Lately, I've focused on Ruby on Rails and AngularJS 2. I began programming becau
 ### I built a memorizing app.
 
 I have my own project which is [hybrid application](https://memoriseword.com/) for memorizing words. It's based on Ruby on Rails, Nativescript and Angular2.
+* [App page](https://memoriseword.com/)
 * [Mobile client repositry](https://github.com/ikuto0608/mwa_client_mobile)
 * [Web client repositry](https://github.com/ikuto0608/mwa_client)
 * [Server repositry](https://github.com/ikuto0608/mwa_server)
