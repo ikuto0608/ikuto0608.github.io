@@ -5,9 +5,20 @@ permalink: /about/
 tags: about
 ---
 
+## I'm a Ruby on Rails / AngularJS 2 developer in Vancouver.
+
 I'm Ikuto, 27, and I'd like to do programming like breathing naturally.
-I lately focus on Angular2 or more, Nativescript and Ruby on Rails. I began programming because I wanted to get power that put my idea on real anytime I hit upon a good idea.
+I lately focus on Ruby on Rails and Angular2. I began programming because I wanted to get power that put my idea on real anytime I hit upon a good idea.
 
-I'm currently learning about programming at ITD Canada (It's one of college) in Vancouver. And I'll work as programmer in Vancouver for 2 years using Co-op program and working holiday Visa from 2017 April.
+## I built memorizing app.
 
-I had worked as programmer for 4 years in Japan before came Vancouver. I was using Ruby on Rails, C++ and Java.
+I have an own project which is hybrid application for memorizing words. It's based on Ruby on Rails, Nativescript and Angular2.
+* [Memorise](https://memoriseword.com/)
+* [Mobile client repositry](https://github.com/ikuto0608/mwa_client_mobile)
+* [Web client repositry](https://github.com/ikuto0608/mwa_client)
+* [Server repositry](https://github.com/ikuto0608/mwa_server)
+
+## Learning AI is my next stage.
+
+I believe people can write programming like using own language near future. So
+I want new rare skill. Then I started to learn neural network and deep learning.
