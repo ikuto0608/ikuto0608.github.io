@@ -51,7 +51,8 @@
 .share-page {
   position: fixed;
   left: 0;
-  top: 150px;
+  bottom: 350px;
+  height: 300px;
 }
 
 .share-links a {
@@ -59,4 +60,9 @@
   text-align: center;
   padding: 16px;
   transition: all 0.3s ease;
+}
+
+.share-links a:hover {
+  color: #86C166;
+  border: none;
 }
