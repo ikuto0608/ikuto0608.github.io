@@ -51,7 +51,9 @@
 .share-page {
   position: fixed;
   left: 0;
-  bottom: 350px;
+  margin: auto 0;
+  top: 50%;
+  bottom: 50%;
   height: 300px;
 }
 
