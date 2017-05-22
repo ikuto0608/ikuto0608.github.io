@@ -61,3 +61,10 @@ layout: default
     </div>
   {% endfor %}
 {% endif %}
+
+<script type="text/javascript">
+  var meta = document.createElement('meta');
+  meta.property = "og:image";
+  meta.content = "{{ site.url }}/{{ post.image }}";
+  document.getElementsByTagName('head')[0].appendChild(meta);
+</script>
