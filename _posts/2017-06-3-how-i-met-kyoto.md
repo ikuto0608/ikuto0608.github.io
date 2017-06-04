@@ -32,4 +32,5 @@ You cannot choose your hometown, it means hometown is given place, and Kyoto is 
 
 
 I do love the youth hostel so that I helped to build the website.
-[http://tarocafe.jp/]
+
+[http://tarocafe.jp/](http://tarocafe.jp/)
