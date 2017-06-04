@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      How I met Kyoto.
-date:       2017-05-28 18:53:00
-summary:    How I met Kyoto.
+date:       2017-06-03 18:04:00
+summary:    You should have one or more experiences that changes your life in a better way.
 categories: Kyoto
 image: images/kyoto.jpg
 ---
@@ -32,4 +32,4 @@ You cannot choose your hometown, it means hometown is given place, and Kyoto is 
 
 
 I do love the youth hostel so that I helped to build the website.
-http://tarocafe.jp/
+[http://tarocafe.jp/]
