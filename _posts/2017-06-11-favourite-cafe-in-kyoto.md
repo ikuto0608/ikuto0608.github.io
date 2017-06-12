@@ -32,7 +32,7 @@ So I feel here is my secret place, but actually this cafe is so popular and many
 And it's at centre of Kyoto, near Kiyamachi st(木屋町通). You can use here to wait your friends, or spend your time till having dinner.
 
 ![elephant]({{ site.url }}images/elephant.jpg)
-It wan in the cafe but ohhh I didn't drink coffee.lol
+It was in the cafe but ohhh I didn't drink coffee.lol
 
 ### [Chieria](https://tabelog.com/en/kyoto/A2601/A260302/26022748/)
 
