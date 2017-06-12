@@ -37,7 +37,7 @@ It was in the cafe but ohhh I didn't drink coffee.lol
 
 ### [Chieria](https://tabelog.com/en/kyoto/A2601/A260302/26022748/)
 
-This cafe is so homely place, you can stay with "Kotatsu" in winter which is a traditional Japanese table with an electric heater underneath and cozzy branket. And nice to have lunch, it has healthy and asian taste lunch.
+This cafe is so homely place, you can stay with "Kotatsu" in winter which is a traditional Japanese table with an electric heater underneath and cozzy blanket. And nice to have lunch, it has healthy and asian taste lunch.
 
 
 
