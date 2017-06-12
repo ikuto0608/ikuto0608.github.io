@@ -7,10 +7,10 @@ categories: kyoto cafe
 image: images/mizuiro.jpg
 ---
 
-Since I went to Kyoto when I was a university student, I often went back Kyoto. I always used [Tarocafe](http://tarocafe.jp/en) to stay. But I'm not like that person who likes sightseeing temples and shrines so that Kyoto even has a lots of those beautiful places, I didn't go there after I've gone Kyoto first or second time.
+Since I went to Kyoto when I was a university student, I often went back Kyoto. I always used [Tarocafe](http://tarocafe.jp/en) to stay. But I'm not like that person who likes sightseeing temples and shrines so that Kyoto even has a lot of those beautiful places, I didn't go there after I've gone Kyoto first or second time.
 
 
-Why I go to Kyoto is I like people who I met, but not only that also there are many interesting places for me, for example cafes, Kyoto also has developing cafe culture, called "Kissa Bunka". So a lots of cafe are in Kyoto. I've gone to there to go around cafes. I'm wanna show you my favourites cafes here. You already might know them because those are famous cafes I believe!
+Why I go to Kyoto is I like people who I met, but not only that also there are many interesting places for me, for example cafes, Kyoto also has developing cafe culture, called "Kissa Bunka". So a lot of cafe are in Kyoto. I've gone to there to go around cafes. I'm wanna show you my favourites cafes here. You already might know them because those are famous cafes I believe!
 
 
 
@@ -32,6 +32,7 @@ So I feel here is my secret place, but actually this cafe is so popular and many
 And it's at centre of Kyoto, near Kiyamachi st(木屋町通). You can use here to wait your friends, or spend your time till having dinner.
 
 ![elephant]({{ site.url }}images/elephant.jpg)
+
 It was in the cafe but ohhh I didn't drink coffee.lol
 
 ### [Chieria](https://tabelog.com/en/kyoto/A2601/A260302/26022748/)
