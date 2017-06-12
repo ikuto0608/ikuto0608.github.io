@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      You should go those cafes in Kyoto.
+title:      I wanna introduce cafes where You should go in Kyoto.
 date:       2017-06-11 16:32:00
-summary:    You should go those cafes in Kyoto.
+summary:    There are my favourite cafes in Kyoto.
 categories: kyoto cafe
 image: images/mizuiro.jpg
 ---
