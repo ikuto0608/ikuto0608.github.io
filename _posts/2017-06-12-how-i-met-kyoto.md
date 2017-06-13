@@ -23,4 +23,4 @@ I still clearly remember the owner who runs Tarocafe, named Taro-san and another
 Taro-san taught us, coke is the best drink after you eat sushi. Since I heard the story I follow the way and yeah, that's matched with sushi for sure.
 I currently lives in Vancouver, Canada. I cannot go to the rotated sushi shop. But fortunately there are a lot of sushi place in Vancouver and some of them are really delicious but still I so miss rotated sushi shop. There is no rotated one here.
 
-<video controls="controls" width="800" height="600" name="Video Name" src="https://ikuto0608.github.io/images/tarocafe.mov"></video>
+<video width="100%" name="tarocafe" src="https://ikuto0608.github.io/images/tarocafe.mov"></video>
