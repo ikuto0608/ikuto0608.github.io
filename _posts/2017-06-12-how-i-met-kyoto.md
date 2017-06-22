@@ -3,7 +3,7 @@ layout:     post
 title:      How I met Kyoto, part 2
 date:       2017-06-12 22:16:00
 summary:    The man who I met in Tarocafe was so mysterious and acatalepsy for me.
-categories: Kyoto Tarocafe
+categories: Kyoto Tarocafe Hostel Trip
 image: images/kyoto.jpg
 ---
 

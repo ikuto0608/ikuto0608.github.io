@@ -3,7 +3,7 @@ layout:     post
 title:      I wanna introduce cafes where You should go in Kyoto.
 date:       2017-06-11 16:32:00
 summary:    There are my favourite cafes in Kyoto.
-categories: kyoto cafe
+categories: kyoto cafe coffee
 image: images/mizuiro.jpg
 ---
 

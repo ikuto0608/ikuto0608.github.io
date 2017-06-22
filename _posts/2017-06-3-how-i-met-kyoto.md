@@ -3,7 +3,7 @@ layout:     post
 title:      How I met Kyoto
 date:       2017-06-03 18:04:00
 summary:    You should have one or more experiences that changes your life. in a better way
-categories: Kyoto
+categories: Kyoto Tarocafe Hostel Trip
 image: images/kyoto.jpg
 ---
 
