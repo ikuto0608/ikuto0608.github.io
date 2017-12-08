@@ -4,8 +4,10 @@ title:      最小コードでBlockchainを表現する
 date:       2017-12-07 19:19:00
 summary:    Naivechainを参考にRubyでかいてみる
 categories: blockchain programming
-image: images/movie.jpg
+image: images/coin_news.png
 ---
+
+![coin news]({{ site.url }}images/coin_news.png)
 
 ブロックチェーンて？Bitcoinて？具体的にはどんなものかというのが複雑でいまいち把握できずにいたところ、この[naivechain(https://github.com/lhartikk/naivechain)](https://github.com/lhartikk/naivechain)というrepositoryに出会ったので写経しつつ理解しようと思いました。ここでは最小限の機能を持ったブロックチェーンを最小行のソースコードで表現しているのでブロックチェーンの基本的な考えをやさしく理解できるのではないかなと思います。同じように[naivechain](https://github.com/lhartikk/naivechain)を参考に書き換えているrepositoryがGithubでたくさん見られたので負けじと僕もやっていこうかなと。Javascriptて書かれたものなのですがこれをRubyでかき換えつつ噛み砕いでいった過程を記します。
 
