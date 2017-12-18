@@ -4,7 +4,7 @@ title:      Dappプログラマへの最初の一歩
 date:       2017-12-18 01:06:00
 summary:    プラットフォームとしてのEthereum
 categories: blockchain Ethereum dapp
-image: images/bitcoin.png
+image: images/bitcoin.jpg
 ---
 
 こちらは[Frog Advent Calendar 2017 (https://adventar.org/calendars/2350)](https://adventar.org/calendars/2350)の19日目に載っています。
