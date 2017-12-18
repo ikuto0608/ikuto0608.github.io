@@ -7,9 +7,10 @@ categories: blockchain Ethereum dapp
 image: images/bitcoin.png
 ---
 
-![bitcoin]({{ site.url }}images/bitcoin.jpg)
-
 こちらは[Frog Advent Calendar 2017 (https://adventar.org/calendars/2350)](https://adventar.org/calendars/2350)の19日目に載っています。
+
+
+![bitcoin]({{ site.url }}images/bitcoin.jpg)
 
 
 #### はじめに
