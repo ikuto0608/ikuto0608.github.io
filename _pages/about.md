@@ -6,7 +6,7 @@ permalink: /about/
 
 ## I'm a Ruby on Rails / AngularJS 2 developer in Vancouver.
 
-I'm Ikuto, 27, and I'd like to be able to do programming like breathing naturally.
+I'm Ikuto, 28, and I'd like to be able to do programming like breathing naturally.
 Lately, I've focused on Ruby on Rails and AngularJS 2. I began programming because I wanted to have the power to make my ideas real, anytime I hit upon a good idea.
 
 ### I built a memorizing app.
