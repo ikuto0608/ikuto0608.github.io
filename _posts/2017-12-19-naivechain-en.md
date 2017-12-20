@@ -2,7 +2,7 @@
 layout:     post
 title:      It describes Blockchain with minimum line.
 date:       2017-12-19 19:19:00
-summary:    It's going to write Blockchain in Ruby, inspired by Naivechain
+summary:    I'm going to write Blockchain in Ruby, inspired by Naivechain
 categories: blockchain programming
 image: images/coin_news.png
 ---
