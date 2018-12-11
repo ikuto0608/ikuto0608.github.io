@@ -10,14 +10,16 @@ image: images/slack_notification.png
 こちらは[**Frog Advent Calendar 2018**](https://adventar.org/calendars/2875)の14日目の記事となります。
 
 先月にAWS LambdaがRubyでかけるようになると[**Amazonからアナウンス**](https://aws.amazon.com/blogs/compute/announcing-ruby-support-for-aws-lambda/)があり、界隈で話題になっていたので早速手を動かしてみようということで。仕事でもすこーしだけLambdaで実装している部分があって、それはJavascriptで書いています。メインはAWS EC2で複数インスタンスを立ててその中でMicroservicesの形を取って複数のDockerインスタンスが各々Railsアプリを動かしています。で各サービス間はRESTでやりとりしたり、AWS SQS/SNSでサブスクリプションし合う形を取っています。その脇役として小さな処理をLambdaに任せている、ざっくり仕事のバックエンド環境はこのようになります。とりあえずバックエンドのみの説明だけ、backend developerとして働いているので。
-
-
+<br />
+<br />
 さて、Lambdaとは何か、[**Amazonの公式サイト**](https://aws.amazon.com/lambda/)では、
 > Run code without thinking about servers. Pay only for the compute time you consume.
 
 とありますが、少し前にサーバーレスという言葉が流行ってた気がするのだけれど(最近そんな聞かない)、Lambdaはサーバーレスで、小さなアクション単位に作ることができる。RailsとかMVCなアーキテクチャーのフレームワークで例えると、コントローラーの中の１アクションをひとつのLambdaで表現できるイメージで僕はいます。
 
 便利なものでLambdaの発動条件(トリガー)も様々から選べて、RESTで受けるAWS Gatewayから始まり、AWS S3に噛ませればファイルの更新をトリガーに走らせることでもできて、CloudWatach Eventでcronタスクでスケジューラーとしても走らせることができ、考えられることはなんでもできるといったところでしょうか。
+
+<br />
 
 それでは実際に触っていくのですが、すごーい簡単なもので何かないか、どうせ作るのなら何か欲しいものをと、考えていたら最近おしゃれなTatooを描くアーティストを見つけたことを思い出し、バンクーバーbasedの人なんですがInstagramのアカウントをちょくちょく見ていて、
 
@@ -98,12 +100,61 @@ CloudWatchでcronタスクを設定するとこのように確認できました
 
 [![Image from Gyazo](https://i.gyazo.com/8764c918406cfad8ad7e75eb4358abc9.gif)](https://gyazo.com/8764c918406cfad8ad7e75eb4358abc9)
 
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 あとは寝て待つのみ、、
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 朝がきて、夜がきて、、
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 また朝がきて、時は経ち、、
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 ![slack notification]({{ site.url }}images/slack_notification.png)
 
 キターー！！！のを実は事前にご丁寧にもInstagramのstoryで告知してたのを見てしまっていたのでいつ変わるかを事前に知っていたという。。。
