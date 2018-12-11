@@ -70,7 +70,7 @@ image: images/slack_notification.png
 
 ```
 
-これをデプロイしていくわけですが、[**AWS CLI**](https://aws.amazon.com/cli/)と[**AWS SAM**](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)を使っていきます。SAMは初めてだったんですが、いいですね、バージョンコントロールができて。仕事ではいまだにLambdaのちゃんとしたデプロイフローが確立できていないのがまずいところで、Lambda以外ではしっかりとあって、[**Terraform**](https://www.terraform.io/)でベースを定義して、独自に作ったコマンドで日々のデプロイをしています。これらのツールはPythonが入ってれば普通にターミナルからコマンド叩いて導入できますね(ちょっと過去に複数versionのPython入れようとしてなんや感やしていたのでSAMが動くようなるまで時間がかかりましたが)。AWS CLIは使う前にconfig設定してあげると使えるようなりますね。
+これをデプロイしていくわけですが、[**AWS CLI**](https://aws.amazon.com/cli/)と[**AWS SAM**](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)を使っていきます。SAMは初めてだったんですが、いいですね、バージョンコントロールができて。仕事ではいまだにLambdaのちゃんとしたデプロイフローが確立できていないのがまずいところで、Lambda以外ではしっかりとあって、[**Terraform**](https://www.terraform.io/)でベースを定義して、独自に作ったコマンドで日々のデプロイをしています。これらのツールはPythonが入ってれば普通にターミナルからコマンド叩いて導入できますね(以前に複数versionのPython入れようとしてなんやかんやしていたせいでSAMが動くようなるまで時間がかかりましたが)。AWS CLIは使う前にconfig設定してあげると使えるようなりますね。
 
 流すコマンドは以下二つ、
 ```
@@ -84,7 +84,7 @@ image: images/slack_notification.png
 
 ![lambda console]({{ site.url }}images/lambda.png)
 
-これで走らせるコードは用意できたので、次にトリガーを設定します。ここではCloudWatchを使って10分ごとにコードが走るように設定していきます。
+これで走らせるコードは用意できたので、次にトリガーを設定します。ここではCloudWatch Eventを使って10分ごとにコードが走るように設定していきます。
 
 CloudWatchでcronタスクを設定するとこのように確認できました。
 ```
