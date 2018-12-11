@@ -157,7 +157,7 @@ CloudWatchでcronタスクを設定するとこのように確認できました
 <br />
 ![slack notification]({{ site.url }}images/slack_notification.png)
 
-キターー！！！の来たんですが、実はご丁寧にもInstagramのstoryで告知してたのを先に見てしまっていたのでいつ変わるかを事前に知っていたという。。。
+キターー！！！のは来たんですが、実はご丁寧にもInstagramのstoryで告知してたのを先に見てしまっていたのでいつ変わるかを事前に知っていたという。。。
 
 
 codeは[**ここから**](https://github.com/ikuto0608/insta_notification)
