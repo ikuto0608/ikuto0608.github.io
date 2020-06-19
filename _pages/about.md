@@ -19,7 +19,7 @@ I have my own project which is [hybrid application](https://memoriseword.com/) f
 
 ### Learning machine learning is my current interest.
 Lately I am playing around with fastText to classify stuff I want.
-Here is an example that classifies Tweets for some ways. [fastText + Twitter streaming API](https://coloured-map.herokuapp.com/)
+Here is an example that classifies Tweets for some ways. **[fastText + Twitter streaming API]**(https://coloured-map.herokuapp.com/)
 
 ### Learning Blockchain was my motivation.
 
