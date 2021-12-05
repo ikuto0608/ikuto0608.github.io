@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-<body class="site{% if site.animated %} animated fade-in-down{% endif %}">
+<body>
   {% if site.google_tag_manager %}
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -17,16 +17,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		}(document, 'script', 'facebook-jssdk'));</script>
 	{% endif %}
 
-  <div class="site-wrap">
-    {% include header.html %}
+  <div class="site{% if site.animated %} animated fade-in-down{% endif %}">
+    <div class="site-wrap">
+      {% include header.html %}
 
-    <div class="post p2 p-responsive wrap" role="main">
-      <div class="measure">
-        {{ content }}
+      <div class="post p2 p-responsive wrap" role="main">
+        <div class="measure">
+          {{ content }}
+        </div>
       </div>
     </div>
+
+    {% include footer.html %}
   </div>
 
-  {% include footer.html %}
+  {% if (page.url != "/") and (page.url != "/about/") and (page.url != "/cv/") %}
+    {% if site.show_sharing_icons %}
+      {% include share_buttons.html %}
+    {% endif %}
+  {% endif %}
+
+  {% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+  {% endif %}
 </body>
 </html>

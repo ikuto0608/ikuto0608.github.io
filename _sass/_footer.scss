@@ -14,12 +14,12 @@
 .site-wrap {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 footer {
-  background-color: $footer-bg-color;
+  background-color: $footer-background;
   border-top: $footer-border-top;
   color: $footer-color;
   font-size: $footer-font-size;
