@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      チームでボールを投げあうに至った話
-date:       2021-12-05 00:00:00
+date:       2021-12-06 00:00:00
 summary:    Shopify Partyなるものを見かけて感激したところからはじまった
 categories: unity shopify
 image: images/preview2.png
