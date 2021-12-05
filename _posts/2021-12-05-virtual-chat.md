@@ -4,7 +4,7 @@ title:      チームでボールを投げあうに至った話
 date:       2021-12-05 00:00:00
 summary:    Shopify Partyなるものを見かけて感激したところからはじまった
 categories: unity shopify
-image: images/slack_notification.png
+image: images/preview2.png
 ---
 
 従業員が数百人いてかつリモートワークで日々仕事していると普段関わりのない同僚はほんとうに関わらないまま時間は過ぎて少しさみしいなと思っていたところにTwitterに流れてきたtweetがこれ。
