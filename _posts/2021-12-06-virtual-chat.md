@@ -7,6 +7,8 @@ categories: unity shopify
 image: images/preview2.png
 ---
 
+この記事は [SmartHR AdventCalendar](https://qiita.com/advent-calendar/2021/smarthr) の6日目です。
+
 従業員が数百人いてかつリモートワークで日々仕事していると普段関わりのない同僚はほんとうに関わらないまま時間は過ぎて少しさみしいなと思っていたところにTwitterに流れてきたtweetがこれ。
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We built an internal game at Shopify to make virtual hangouts more fun. It’s called Shopify Party, and I’d love to tell you all about it 👇🏻 <br>[1/6] <a href="https://t.co/DwzxwWty3V">pic.twitter.com/DwzxwWty3V</a></p>&mdash; Daniel Beauchamp (@pushmatrix) <a href="https://twitter.com/pushmatrix/status/1442839002432802818?ref_src=twsrc%5Etfw">September 28, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
