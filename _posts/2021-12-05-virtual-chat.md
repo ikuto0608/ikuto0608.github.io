@@ -77,6 +77,7 @@ Realtime Avatar Voiceは内部でUnityのAudioSourceを参照してるので明�
 ボールを投げる機能をいれたところ話すより投げるほうで盛り上がり結果雑談をまったくせずひたすらボールを投げては当てて終わりました。
 
 ![cow]({{ site.url }}images/cow.gif)
+
 (実際に投げ合う画を撮り忘れたのでそれらしいものを添付)
 
 プレイヤーの位置情報はRealtimeコンポーネントを追加することで勝手にしてくれますが、アニメーションの状態の同期やニックネームの同期は数ステップで必要で、[RealtimeModel](https://normcore.io/documentation/room/realtimemodel.html#realtimemodel-realtimeproperty-attributes)スクリプトを差し込んでこれを実現できました。
