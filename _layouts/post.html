@@ -9,75 +9,87 @@ layout: default
 
 <div class="post-header mb2">
   {% if page.ref %}
-    <div class="lang-switcher">
-      {% for post in site.posts %}
-        {% if post.ref == page.ref and post.lang != page.lang %}
-          <a href="{{ post.url | prepend: site.baseurl }}" class="nes-btn" onclick="triggerLoadingEffect(event)">
-            <span class="btn-text">SWAP LANG to {{ site.data.i18n[post.lang].lang }}</span>
-          </a>
-        {% endif %}
-      {% endfor %}
-    </div>
+  {% assign has_translation = false %}
+  {% for post in site.posts %}
+  {% if post.ref == page.ref and post.lang != page.lang %}
+  {% assign has_translation = true %}
+  {% endif %}
+  {% endfor %}
+  {% if has_translation %}
+  <div class="lang-switcher">
+    {% for post in site.posts %}
+    {% if post.ref == page.ref and post.lang != page.lang %}
+    <a href="{{ post.url | prepend: site.baseurl }}" class="nes-btn" onclick="triggerLoadingEffect(event)">
+      <span class="btn-text">SWAP LANG to {{ site.data.i18n[post.lang].lang }}</span>
+    </a>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
   {% endif %}
   <h1>{{ page.title }}</h1>
   <span class="post-meta">{{ page.date | date: site.date_format }}</span><br>
   {% if page.update_date %}
-    <span class="post-meta">{{ site.text.post.updated }}: {{ page.update_date | date: site.date_format }}</span><br>
+  <span class="post-meta">{{ site.text.post.updated }}: {{ page.update_date | date: site.date_format }}</span><br>
   {% endif %}
   <span class="post-meta small">
-  {% if page.minutes %}
+    {% if page.minutes %}
     {{ page.minutes }} {{ site.text.post.minute_read }}
-  {% else %}
+    {% else %}
     {{ minutes }} {{ site.text.post.minute_read }}
-  {% endif %}
+    {% endif %}
   </span>
 </div>
 
 <article class="post-content">
   {% if page.ref %}
-    <div class="ai-notice" style="background-color: #f4f4f4; padding: 15px; border-left: 5px solid #ce322b; margin-bottom: 30px; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
-      <strong>[SYSTEM MESSAGE]</strong> This post was simultaneously generated in Japanese and English using the <em>Gemini 2.5 Flash-Lite</em> AI engine via 1-pass multi-language generation. <br>
-      <small>Powered by ARIGATO COFFEE System</small>
-    </div>
+  <div class="ai-notice"
+    style="background-color: #f4f4f4; padding: 15px; border-left: 5px solid #ce322b; margin-bottom: 30px; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
+    <strong>[SYSTEM MESSAGE]</strong> This post was simultaneously generated in Japanese and English using the
+    <em>Gemini 2.5 Flash-Lite</em> AI engine via 1-pass multi-language generation. <br>
+    <small>Powered by ARIGATO COFFEE System</small>
+  </div>
   {% endif %}
 
   {{ content }}
 </article>
 
 {% if site.show_post_footers %}
-  {% include post_footer.html %}
+{% include post_footer.html %}
 {% endif %}
 
 {% if site.disqus_shortname %}
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    var disqus_shortname  = '{{ site.disqus_shortname }}';
-    var disqus_identifier = '{{ page.id }}';
-    var disqus_title      = {{ page.title | jsonify }};
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = '{{ site.disqus_shortname }}';
+  var disqus_identifier = '{{ page.id }}';
+  var disqus_title = {{ page.title | jsonify }};
 
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
 {% endif %}
 
 {% if site.facebook_comments %}
-  <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-width="100%" data-numposts="{{ site.facebook_comments_number }}"></div>
+<div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-width="100%"
+  data-numposts="{{ site.facebook_comments_number }}"></div>
 {% endif %}
 
 {% if site.show_related_posts %}
-  <h3 class="related-post-title">{{ site.text.post.related_posts }}</h3>
-  {% for post in site.related_posts %}
-    <div class="post ml2">
-      <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-        <h4 class="post-title">{{ post.title }}</h4>
-        <p class="post-summary">{{ post.summary }}</p>
-      </a>
-    </div>
-  {% endfor %}
+<h3 class="related-post-title">{{ site.text.post.related_posts }}</h3>
+{% for post in site.related_posts %}
+<div class="post ml2">
+  <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
+    <h4 class="post-title">{{ post.title }}</h4>
+    <p class="post-summary">{{ post.summary }}</p>
+  </a>
+</div>
+{% endfor %}
 {% endif %}
 
 <script type="text/javascript">
@@ -90,7 +102,7 @@ layout: default
     event.preventDefault();
     document.body.classList.add('loading');
     var targetUrl = event.currentTarget.getAttribute('href');
-    setTimeout(function() {
+    setTimeout(function () {
       window.location.href = targetUrl;
     }, 800);
   }
