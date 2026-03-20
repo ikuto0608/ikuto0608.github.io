@@ -32,6 +32,8 @@ To quantify this "delay in recovery," our system primarily monitors the followin
 
 The moment these indicators exceed a certain threshold, an alert is triggered, signaling that the roasting tipping point is near.
 
+<video src="/files/roasting.mp4" width="100%" controls autoplay loop muted playsinline style="border-radius: 8px; margin: 2rem 0;"></video>
+
 ## Verification Data: Backtesting with Past Logs
 
 As a result of backtesting using dozens of accumulated past roasting logs (`.alog`, etc.), we've seen that this CSD algorithm can detect a clear sign with decent accuracy, **30 to 120 seconds before the actual first crack occurs (lead time)**. Also, Claude analyzes the data instantly, which is incredibly convenient.
