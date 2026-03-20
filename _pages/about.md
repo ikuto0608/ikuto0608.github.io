@@ -15,6 +15,5 @@ I'm Ikuto. I began programming because I wanted the power to make my ideas real.
 ### More
 
 * [**Linkedin**](https://www.linkedin.com/in/ikutoyata/)
-* [**Facebook**](https://www.facebook.com/ikuto.yata)
 * [**Github**](https://github.com/ikuto0608)
 * [**Instagram**](https://www.instagram.com/ikuto0608)

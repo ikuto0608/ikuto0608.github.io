@@ -25,30 +25,13 @@ ajaxify_contact_form: false
 enable_mathjax: false
 extended_fonts: true
 enable_anchorjs: false
-
-# Facebook Page integration
-# (for instant articles and other stuff)
-fb_page: false
-fb_page_id:
-
-# Disqus post comments
-# (leave blank to disable Disqus)
-disqus_shortname:
-
-# Facebook Comments plugin
-# (leave blank to disable Facebook Comments, otherwise set it to true)
-facebook_comments:
-facebook_appid:
-facebook_comments_number: 10
-
 # Social icons
 github_username: ikuto0608
 bitbucket_username:
 stackoverflow_id:
-twitter_username: ikuto0608
+x_username: ikuto0608
 skype_username:
 steam_nickname:
-google_plus_id:
 linkedin_username: ikutoyata
 angellist_username:
 medium_id:
@@ -59,13 +42,10 @@ flattr_button:
 # Post sharing icons
 show_sharing_icons: true
 # Change to 'true' to enable individual icons
-share_facebook: true
-share_twitter: true
-share_googleplus: true
-share_linkedin: false
+share_x: true
+share_linkedin: true
 share_digg: false
-share_tumblr: true
-share_reddit: false
+share_reddit: true
 share_stumbleupon: false
 share_hackernews: false
 
@@ -75,12 +55,9 @@ text:
     older: 'Older'
   share_buttons:
     text:         'Share this post!'
-    facebook:     'Share on Facebook'
-    twitter:      'Share on Twitter'
-    googleplus:   'Share on Google+'
+    x:            'Share on X'
     linkedin:     'Share on LinkedIn'
     digg:         'Share on Digg'
-    tumblr:       'Share on Tumblr'
     reddit:       'Share on Reddit'
     stumbleupon:  'Share on StumbleUpon'
     hackernews:   'Share on Hacker News'

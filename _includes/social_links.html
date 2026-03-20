@@ -10,17 +10,16 @@
       <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}"></a>
     {% endif %}
     <a class="fa fa-rss" href="{{ "/feed.xml" | prepend: site.baseurl }}"></a>
-    {% if site.twitter_username %}
-      <a class="fa fa-twitter" href="https://twitter.com/{{ site.twitter_username }}"></a>
+    {% if site.x_username %}
+      <a class="fa" style="display: inline-flex; align-items: center; justify-content: center;" href="https://x.com/{{ site.x_username }}">
+        <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+      </a>
     {% endif %}
     {% if site.skype_username %}
       <a class="fa fa-skype" href="skype:{{ site.skype_username }}?userinfo"></a>
     {% endif %}
     {% if site.steam_nickname %}
       <a class="fa fa-steam-square" href="http://steamcommunity.com/id/{{ site.steam_nickname }}"></a>
-    {% endif %}
-    {% if site.google_plus_id %}
-      <a class="fa fa-google-plus" href="https://plus.google.com/{{ site.google_plus_id }}/posts"></a>
     {% endif %}
     {% if site.email %}
       <a class="fa fa-envelope" href="mailto:{{ site.email }}"></a>
