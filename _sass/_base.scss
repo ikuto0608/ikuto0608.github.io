@@ -13,7 +13,8 @@ MIT License http://opensource.org/licenses/MIT
 
 */
 
-html, body {
+html,
+body {
   height: auto;
   min-height: 100%;
 }
@@ -28,8 +29,8 @@ em img {
 }
 
 body {
-          box-sizing: border-box;
-     -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   background-color: $bg-color;
   color: $text-color;
@@ -40,9 +41,12 @@ body {
     content: " ";
     display: block;
     position: fixed;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+      linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
     background-size: 100% 2px, 3px 100%;
     z-index: 9999;
     pointer-events: none;
@@ -73,60 +77,94 @@ body {
 }
 
 @keyframes scanline {
-  0% { box-shadow: 0 0 0 0 rgba(0,255,0,0.2) inset; }
-  50% { box-shadow: 0 100vh 0 0 rgba(0,255,0,0.2) inset; }
-  100% { box-shadow: 0 0 0 0 rgba(0,255,0,0.2) inset; }
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.2) inset;
+  }
+
+  50% {
+    box-shadow: 0 100vh 0 0 rgba(0, 255, 0, 0.2) inset;
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.2) inset;
+  }
 }
 
 @keyframes loading-flicker {
-  0% { opacity: 1; }
-  50% { opacity: 0.8; }
-  100% { opacity: 1; }
-}
-
-/* NES Button */
-.nes-btn {
-  display: inline-block;
-  background-color: #ce322b;
-  color: #fff;
-  border: 4px solid #000;
-  box-shadow: 4px 4px 0 #000;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  line-height: 24px;
-  text-align: center;
-  padding: 0;
-  text-decoration: none;
-  font-family: $heading-font-family;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  cursor: pointer;
-  transition: all 0.1s;
-
-  .btn-text {
-    display: none;
+  0% {
+    opacity: 1;
   }
 
-  &::before {
-    content: "A";
-    font-size: 14px;
+  50% {
+    opacity: 0.8;
   }
 
-  &:hover {
-    color: #fff;
-    background-color: #e5463f;
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 #000;
-  }
-
-  &:active {
-    transform: scale(0.9);
-    box-shadow: 0 0 0 #000;
+  100% {
+    opacity: 1;
   }
 }
 
-.lang-switcher {
+/* NES Controller Language Switcher */
+.nes-controller-switch {
   text-align: right;
+  margin-bottom: 20px;
+
+  .label {
+    display: block;
+    font-family: $heading-font-family;
+    font-size: 10px;
+    color: $accent-magenta;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-round {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ce322b;
+    color: #fff;
+    border: 3px solid #000;
+    box-shadow: 3px 3px 0 #000;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-family: $heading-font-family;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.1s;
+
+    &.active {
+      background-color: #777;
+      box-shadow: inset 2px 2px 0 #000, 1px 1px 0 #000;
+      transform: translate(2px, 2px);
+      cursor: default;
+      color: #ccc;
+    }
+
+    &:not(.active):hover {
+      background-color: #e5463f;
+      transform: translate(1px, 1px);
+      box-shadow: 2px 2px 0 #000;
+    }
+
+    &:not(.active):active {
+      transform: translate(3px, 3px);
+      box-shadow: 0 0 0 #000;
+    }
+  }
 }
