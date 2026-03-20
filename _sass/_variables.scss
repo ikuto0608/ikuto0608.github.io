@@ -107,20 +107,20 @@ $pre-border-radius: 0;
 $pre-background-color: #000;
 $hljs-comment: $mid-gray;
 $hljs-keyword: $pink;
-$hljs-name: $dark-gray;
+$hljs-name: #a0a0cc;
 $hljs-number: #f10002 !default;
 $hljs-string: #4bd74c;
 $hljs-title: $red;
-$hljs-type: $dark-blue;
-$hljs-tag: $dark-blue;
-$hljs-attribute: #10a2e6;
-$hljs-regexp: $dark-green;
+$hljs-type: #7b9fff;
+$hljs-tag: #7b9fff;
+$hljs-attribute: #4db8ff;
+$hljs-regexp: #00cc55;
 $hljs-symbol: $purple;
-$hljs-built-in: $dark-blue;
+$hljs-built-in: #7b9fff;
 $hljs-preprocessor: $red;
-$hljs-deletion: $dark-blue;
+$hljs-deletion: #660000;
 $hljs-addition: $light-green;
-$hljs-change: $dark-blue;
+$hljs-change: #003399;
 $hljs-chunk: $light-gray;
 
 // Footer
