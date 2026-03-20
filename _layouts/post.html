@@ -8,6 +8,17 @@ layout: default
 {% endif %}
 
 <div class="post-header mb2">
+  {% if page.ref %}
+    <div class="lang-switcher">
+      {% for post in site.posts %}
+        {% if post.ref == page.ref and post.lang != page.lang %}
+          <a href="{{ post.url | prepend: site.baseurl }}" class="nes-btn" onclick="triggerLoadingEffect(event)">
+            <span class="btn-text">SWAP LANG to {{ site.data.i18n[post.lang].lang }}</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
   <h1>{{ page.title }}</h1>
   <span class="post-meta">{{ page.date | date: site.date_format }}</span><br>
   {% if page.update_date %}
@@ -23,6 +34,13 @@ layout: default
 </div>
 
 <article class="post-content">
+  {% if page.ref %}
+    <div class="ai-notice" style="background-color: #f4f4f4; padding: 15px; border-left: 5px solid #ce322b; margin-bottom: 30px; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
+      <strong>[SYSTEM MESSAGE]</strong> This post was simultaneously generated in Japanese and English using the <em>Gemini 2.5 Flash-Lite</em> AI engine via 1-pass multi-language generation. <br>
+      <small>Powered by ARIGATO COFFEE System</small>
+    </div>
+  {% endif %}
+
   {{ content }}
 </article>
 
@@ -67,4 +85,13 @@ layout: default
   meta.property = "og:image";
   meta.content = "{{ site.url }}/{{ post.image }}";
   document.getElementsByTagName('head')[0].appendChild(meta);
+
+  function triggerLoadingEffect(event) {
+    event.preventDefault();
+    document.body.classList.add('loading');
+    var targetUrl = event.currentTarget.getAttribute('href');
+    setTimeout(function() {
+      window.location.href = targetUrl;
+    }, 800);
+  }
 </script>

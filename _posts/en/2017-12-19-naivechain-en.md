@@ -5,6 +5,8 @@ date:       2017-12-19 19:19:00
 summary:    I'm going to write Blockchain in Ruby, inspired by Naivechain
 categories: blockchain programming
 image: images/coin_news.png
+lang: en
+ref: naivechain
 ---
 
 ![coin news]({{ site.url }}images/coin_news.png)

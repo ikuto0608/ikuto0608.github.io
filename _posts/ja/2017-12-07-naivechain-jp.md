@@ -5,6 +5,8 @@ date:       2017-12-07 19:19:00
 summary:    Naivechainを参考にRubyでかいてみる
 categories: blockchain programming
 image: images/coin_news.png
+lang: ja
+ref: naivechain
 ---
 
 ![coin news]({{ site.url }}images/coin_news.png)
