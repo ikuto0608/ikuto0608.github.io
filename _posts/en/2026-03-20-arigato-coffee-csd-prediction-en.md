@@ -6,6 +6,7 @@ summary:    "ARIGATO COFFEE: First Crack pre-detection feature. An account of pr
 categories: data-science coffee roasting
 lang: en
 ref: arigato-coffee-csd-prediction
+image: /images/arigato-coffee-roastery.png
 ---
 
 <img src="/images/bullet-r1.jpg" alt="Aillio Bullet R1 V2" width="100%" style="border-radius: 8px; margin-bottom: 2rem;">

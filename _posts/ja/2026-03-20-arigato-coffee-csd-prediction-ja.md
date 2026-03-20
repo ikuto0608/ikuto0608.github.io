@@ -6,6 +6,7 @@ summary:    "ARIGATO COFFEE: 1ハゼ予兆検知機能。CSD（臨界減速）�
 categories: data-science coffee roasting
 lang: ja
 ref: arigato-coffee-csd-prediction
+image: /images/arigato-coffee-roastery.png
 ---
 
 <img src="/images/bullet-r1.jpg" alt="Aillio Bullet R1 V2" width="100%" style="border-radius: 8px; margin-bottom: 2rem;">
