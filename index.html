@@ -7,7 +7,27 @@ layout: default
   {% if posts_count > 0 %}
   <div class="posts">
     {% for post in paginator.posts %}
-    <div class="post">
+    {% if post.lang != 'ja' and post.lang != nil %}
+      {% continue %} <!-- Skip non-Japanese/non-default posts -->
+    {% endif %}
+
+    {% assign en_post = nil %}
+    {% if post.ref %}
+      {% for check_post in site.posts %}
+        {% if check_post.ref == post.ref and check_post.lang == 'en' %}
+          {% assign en_post = check_post %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    <div class="post"
+      {% if en_post %}
+      data-has-translation="true"
+      data-en-url="{{ en_post.url | prepend: site.baseurl }}"
+      data-en-title="{{ en_post.title | escape }}"
+      data-en-summary="{{ en_post.summary | escape }}"
+      {% endif %}
+    >
       <p class="post-meta">{{ post.date | date: site.date_format }}</p>
       <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
         <h3 class="h1 post-title">{{ post.title }}</h3>
@@ -22,6 +42,27 @@ layout: default
     </div>
     {% endfor %}
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('en')) {
+        document.querySelectorAll('.post[data-has-translation="true"]').forEach(post => {
+          const enUrl = post.getAttribute('data-en-url');
+          const enTitle = post.getAttribute('data-en-title');
+          const enSummary = post.getAttribute('data-en-summary');
+          
+          if (enUrl && enTitle) {
+            post.querySelector('.post-link').setAttribute('href', enUrl);
+            post.querySelector('.post-title').textContent = enTitle;
+            if (post.querySelector('.post-summary') && enSummary) {
+              post.querySelector('.post-summary').textContent = enSummary;
+            }
+          }
+        });
+      }
+    });
+  </script>
 
   {% include pagination.html %}
   {% else %}
