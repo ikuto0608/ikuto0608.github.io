@@ -6,8 +6,6 @@ _site
 # Ignore the config file that's used for gh-pages.
 _config.gh-pages.yml
 
-Gemfile.lock
-
 .bundle
 vendor
 jekyll_output.log
