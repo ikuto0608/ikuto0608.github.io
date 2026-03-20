@@ -31,7 +31,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {% include footer.html %}
   </div>
 
-  {% if (page.url != "/") and (page.url != "/about/") and (page.url != "/cv/") %}
+  {% if page.url != "/" and page.url != "/about/" and page.url != "/cv/" %}
     {% if site.show_sharing_icons %}
       {% include share_buttons.html %}
     {% endif %}
@@ -40,5 +40,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   {% if jekyll.environment == 'production' %}
     {% include analytics.html %}
   {% endif %}
+
+  <div id="hp-bar-container" style="position: fixed; bottom: 0; left: 0; width: 100%; height: 10px; background-color: #0f051a; z-index: 9998; border-top: 2px solid #3f2d5e; display: none;">
+    <div id="hp-bar" style="height: 100%; width: 100%; background-color: #00ff41; transition: width 0.1s, background-color 0.3s;"></div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Only show HP bar on post pages (or pages with significant scrolling)
+      if (document.querySelector('.post-content')) {
+        document.getElementById('hp-bar-container').style.display = 'block';
+
+        window.addEventListener('scroll', function() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+
+          // Reverse the bar width (100% at top, 0% at bottom)
+          var hp = 100 - scrolled;
+          var hpBar = document.getElementById('hp-bar');
+
+          hpBar.style.width = hp + "%";
+
+          if (hp > 50) {
+            hpBar.style.backgroundColor = "#00ff41"; // Green
+          } else if (hp > 20) {
+            hpBar.style.backgroundColor = "#efcc00"; // Yellow
+          } else {
+            hpBar.style.backgroundColor = "#dc4850"; // Red
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
