@@ -8,7 +8,9 @@ lang: en
 ref: arigato-coffee-csd-prediction
 ---
 
-Over the past few years, having started with a hand roaster, I purchased a compact home roaster, [Aillio](https://aillio.com/), last year and have been roasting coffee beans.
+<img src="/images/bullet-r1.jpg" alt="Aillio Bullet R1" width="100%" style="border-radius: 8px; margin-bottom: 2rem;">
+
+Over the past few years, having started with a hand roaster, I purchased a compact home roaster, [Aillio](https://aillio.com/) (Aillio Bullet R1), last year and have been roasting coffee beans. All the data and logs used for the verification in this article are derived from this **Aillio Bullet R1**.
 
 While [Aillio](https://aillio.com/) has its own dedicated roasting log app, [RoasTime](https://roastime.aillio.com/), I switched to the more customizable [Artisan](https://artisan-scope.org/) and discovered that I could stream roasting logs in real-time via Websocket.
 This seemed very interesting, so I decided to build a live roasting app that visualizes the logs sent via Websocket in real-time.
