@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSD FC Prediction Accuracy Analysis — ARIGATO COFFEE</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --panel: #12121a;
+    --border: #2a2a3a;
+    --cyan: #00e5ff;
+    --yellow: #ffd600;
+    --red: #ef4444;
+    --orange: #fb923c;
+    --green: #22c55e;
+    --purple: #a855f7;
+    --gray: #6b7280;
+    --text: #e2e8f0;
+    --subtext: #94a3b8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    padding: 24px;
+  }
+  h1 { font-size: 18px; color: var(--cyan); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+  .subtitle { color: var(--subtext); font-size: 11px; margin-bottom: 24px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 16px;
+    position: relative;
+  }
+  .card h2 { font-size: 10px; color: var(--subtext); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+  .big-num { font-size: 36px; font-weight: bold; line-height: 1; }
+  .big-num.cyan   { color: var(--cyan); }
+  .big-num.yellow { color: var(--yellow); }
+  .big-num.green  { color: var(--green); }
+  .big-num.red    { color: var(--red); }
+  .big-num.orange { color: var(--orange); }
+  .unit { font-size: 13px; color: var(--subtext); margin-left: 4px; }
+  .sub  { font-size: 10px; color: var(--subtext); margin-top: 6px; }
+  .chart-wrap { height: 260px; position: relative; }
+  .chart-wrap-tall { height: 320px; position: relative; }
+  .section-title {
+    font-size: 11px; color: var(--cyan); text-transform: uppercase;
+    letter-spacing: 2px; margin: 24px 0 12px;
+    border-bottom: 1px solid var(--border); padding-bottom: 8px;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  th { color: var(--subtext); font-size: 10px; text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+  td { padding: 5px 8px; border-bottom: 1px solid #1a1a28; }
+  tr:hover td { background: #1a1a28; }
+  .good  { color: var(--green); }
+  .ok    { color: var(--yellow); }
+  .warn  { color: var(--orange); }
+  .bad   { color: var(--red); }
+  .na    { color: var(--gray); }
+  .badge {
+    display: inline-block; font-size: 9px; padding: 1px 5px;
+    border: 1px solid; margin-right: 3px;
+  }
+  .badge-watch { color: var(--yellow); border-color: var(--yellow); }
+  .badge-warn  { color: var(--red);    border-color: var(--red);    }
+  .badge-none  { color: var(--gray);   border-color: var(--gray);   }
+  .insight-box {
+    background: #0d1a2a; border: 1px solid #1e3a5f;
+    padding: 14px 16px; margin-bottom: 8px;
+  }
+  .insight-box h3 { font-size: 11px; color: var(--cyan); margin-bottom: 8px; }
+  .insight-box p  { font-size: 11px; color: var(--subtext); line-height: 1.7; }
+  .insight-box .em { color: var(--yellow); }
+  .alert-box {
+    background: #1a0d0d; border: 1px solid #5f1e1e;
+    padding: 14px 16px; margin-bottom: 8px;
+  }
+  .alert-box h3 { font-size: 11px; color: var(--red); margin-bottom: 8px; }
+  .alert-box p  { font-size: 11px; color: var(--subtext); line-height: 1.7; }
+  .progress-bar { background: var(--border); height: 6px; margin-top: 8px; }
+  .progress-fill { height: 100%; }
+  .rec-box {
+    background: #0d1a12; border: 1px solid #1e5f3a;
+    padding: 14px 16px; margin-bottom: 8px;
+  }
+  .rec-box h3 { font-size: 11px; color: var(--green); margin-bottom: 8px; }
+  .rec-box p, .rec-box pre  { font-size: 11px; color: var(--subtext); line-height: 1.7; }
+  .rec-box code { color: var(--cyan); background: #0a1a12; padding: 0 4px; }
+  .rec-box pre  { background: #0a1a12; padding: 10px; margin-top: 8px; border: 1px solid var(--border); }
+  footer { margin-top: 32px; color: var(--gray); font-size: 10px; text-align: center; }
+</style>
+</head>
+<body>
+
+<h1>◈ CSD FC Prediction Accuracy Analysis</h1>
+<div class="subtitle">ARIGATO COFFEE ROASTERY — aillio-roasting-profiles — 2026-03-20 — Target: 31 profiles</div>
+
+<!-- KPI grid -->
+<div class="grid4">
+  <div class="card">
+    <h2>WATCH Trigger Rate</h2>
+    <div class="big-num cyan">87<span class="unit">%</span></div>
+    <div class="sub">27 / 31 profiles</div>
+  </div>
+  <div class="card">
+    <h2>WARN Trigger Rate</h2>
+    <div class="big-num yellow">39<span class="unit">%</span></div>
+    <div class="sub">12 / 31 profiles</div>
+  </div>
+  <div class="card">
+    <h2>MAE (Mean Absolute Error)</h2>
+    <div class="big-num orange">41.8<span class="unit">s</span></div>
+    <div class="sub">Vs Target ±15s Display</div>
+  </div>
+  <div class="card">
+    <h2>WATCH Lead Time (Avg)</h2>
+    <div class="big-num green">96.6<span class="unit">s</span></div>
+    <div class="sub">Median 105s / Min 5s / Max 123s</div>
+  </div>
+</div>
+
+<!-- Charts row 1 -->
+<div class="grid2">
+  <div class="card">
+    <h2>Error Distribution (All 320 ticks · pre-FC only)</h2>
+    <div class="chart-wrap">
+      <canvas id="errDist"></canvas>
+    </div>
+  </div>
+  <div class="card">
+    <h2>MAE per Profile</h2>
+    <div class="chart-wrap">
+      <canvas id="maeBar"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- Charts row 2 -->
+<div class="grid2">
+  <div class="card">
+    <h2>WATCH Lead Time Distribution</h2>
+    <div class="chart-wrap">
+      <canvas id="leadHist"></canvas>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Bias Distribution (Over/Under Estimation)</h2>
+    <div class="chart-wrap">
+      <canvas id="biasDist"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- Insights -->
+<div class="section-title">◈ Analysis Summary</div>
+
+<div class="insight-box">
+  <h3>✓ WATCH consistently triggers early (~97s prior)</h3>
+  <p>WATCH triggered in 27/31 profiles. The average lead time of <span class="em">96.6s</span> (median 105s) provides ample room for the roaster to intervene. The 4 non-triggering cases share beans with mild RoR fluctuations (Magarrissa-Tulise, Suica types), likely due to the characteristics of the bean type and roasting profile.</p>
+</div>
+
+<div class="alert-box">
+  <h3>✗ Main Issue 1: Systematic Underestimation (Bias = -25.8s)</h3>
+  <p>Predictions show an average of <span class="em">25.8s less</span> than the actual remaining time. The cause is the <code>CSD_FC_ESTIMATE_MAX_SEC = 60</code> setting. While WATCH actually triggers 97s prior on average, assuming a 60s limit translates into displaying an insufficient "60s" right after triggering. Currently, only <span class="em">16.9%</span> of all ticks fall within "±15s".</p>
+</div>
+
+<div class="alert-box">
+  <h3>✗ Main Issue 2: Low WARN Trigger Rate (39%)</h3>
+  <p>Only 12 out of 31 profiles reached the AR(1) ≥ 0.50 threshold. Despite lowering it to 0.50 based on the actual maximum AR(1) = 0.45-0.48 in Jigesa_no17, many profiles still do not reach it. Even when WARN triggers, the lead time is only 20s shorter on average than WATCH, blurring the distinction between the two.</p>
+</div>
+
+<div class="alert-box">
+  <h3>✗ Main Issue 3: Delayed Trigger Cases (Lead Time ≤ 10s)</h3>
+  <p>In two profiles, no9 (5s) and no23 (10s), WATCH triggered only 5 to 10s before FC. These also have large positive bias values (overestimation +43 to +50s), indicating the worst-case scenario where FC arrives immediately while displaying "60s remaining". AR(1) may have risen late, or it might be influenced by the warmup period.</p>
+</div>
+
+<!-- Calibration recommendation -->
+<div class="section-title">◈ Calibration Recommendations</div>
+
+<div class="rec-box">
+  <h3>Recommendation 1: Increase CSD_FC_ESTIMATE_MAX_SEC to 100s</h3>
+  <p>Since the WATCH average lead time in actual data is 96.6s, setting the upper limit to 100s will make the estimate at AR(1)=0.35 closer to reality. Sample calculation:</p>
+  <pre>
+AR(1)=0.35 (WATCH):  frac = (0.85-0.35)/(0.85-0.35) = 1.00 → <span style="color:#ffd600">100s</span> (Current: 60s)
+AR(1)=0.50 (WARN):   frac = (0.85-0.50)/(0.85-0.35) = 0.70 → <span style="color:#ffd600">70s</span> (Current: 42s)
+AR(1)=0.70:          frac = (0.85-0.70)/(0.85-0.35) = 0.30 → <span style="color:#ffd600">30s</span> (Current: 18s)
+AR(1)=0.85 (IMMIN):  0s (No change)
+  </pre>
+  <p>Change location: <code>CSD_FC_ESTIMATE_MAX_SEC = 60</code> → <code>100</code> in <code>live_monitor.py</code></p>
+</div>
+
+<div class="rec-box">
+  <h3>Recommendation 2: Lower WARN Threshold to 0.45 (Improve trigger rate)</h3>
+  <p>Checking the maximum AR(1) of all profiles, many plateau around 0.45-0.55. With the current <code>CSD_AR1_WARN = 0.50</code>, more than half do not trigger. Lowering to <code>0.45</code> is expected to improve the trigger rate (estimated 60-70%). However, since the differentiation from WATCH will be even thinner, consider reviewing UI representations.</p>
+  <p>Change location: <code>CSD_AR1_WARN = 0.50</code> → <code>0.45</code> in <code>live_monitor.py</code></p>
+</div>
+
+<div class="rec-box">
+  <h3>Recommendation 3: Reflect "Lead Time Uncertainty" in UI Display</h3>
+  <p>Prediction accuracy is low immediately after WATCH triggers (80-120s before FC, large bias). Errors tend to converge within 30s of FC. Dynamically changing the UI <code>±15s</code> display to <code>±40s</code> right after triggering and <code>±15s</code> close to FC prevents user overconfidence:</p>
+  <pre>
+AR(1) &lt; 0.50 → "Est. XXs ±40s"
+AR(1) 0.50－0.70 → "Est. XXs ±25s"
+AR(1) &gt; 0.70 → "Est. XXs ±15s"
+  </pre>
+</div>
+
+<div class="rec-box">
+  <h3>Recommendation 4: Accumulate Profile Data by Bean Type</h3>
+  <p>The 4 non-triggering profiles are all Magarrissa-Tulise or Suica types. Beans requiring slow temperature increase may be less likely to accumulate Kalman innovation autocorrelation. Once >10 data points are accumulated, consider adjusting CSD_WATCH thresholds by bean type (e.g., slow beans → 0.30).</p>
+</div>
+
+<!-- Per-file table -->
+<div class="section-title">◈ Details per Profile</div>
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>FC Time</th>
+      <th>CSD State</th>
+      <th>WATCH Lead</th>
+      <th>WARN Lead</th>
+      <th>MAE</th>
+      <th>Bias</th>
+      <th>Active ticks</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+
+<footer>ARIGATO COFFEE ROASTERY — CSD Accuracy Analysis — 2026-03-20 — Engine: KalmanBTFilter + CSDMonitor (live_monitor.py)</footer>
+
+<script>
+// ─── Data ────────────────────────────────────────────────────────────────
+const DATA = [
+  {file:"26-02-01_1812_Jigesa_no2",fcs:450,lw:92,ln:20,mae:30.7,bias:-4.7,n:7},
+  {file:"26-02-01_reference_Jigesa_no1",fcs:413,lw:123,ln:null,mae:61.1,bias:-61.1,n:10},
+  {file:"26-02-02_Yirgacheffee-BG_1_no3",fcs:411,lw:110,ln:null,mae:57.9,bias:-57.9,n:10},
+  {file:"26-02-02_Yirgacheffee-BG_2_no4",fcs:441,lw:80,ln:null,mae:20.5,bias:-20.5,n:2},
+  {file:"26-02-02_Magarrissa-Tulise_no5",fcs:446,lw:null,ln:null,mae:null,bias:null,n:0},
+  {file:"26-02-03_Magarrissa-Tulise_no6",fcs:442,lw:117,ln:null,mae:49.8,bias:-49.8,n:8},
+  {file:"26-02-03_Jigesa_no7",fcs:421,lw:101,ln:93,mae:30.6,bias:-23.1,n:29},
+  {file:"26-02-05_Magarrissa-Tulise_1_no8",fcs:499,lw:105,ln:null,mae:37.6,bias:-32.7,n:7},
+  {file:"26-02-05_Magarrissa-Tulise_2_no9",fcs:477,lw:5,ln:null,mae:50.5,bias:50.5,n:4},
+  {file:"26-02-05_Diima-BG_no10",fcs:437,lw:122,ln:null,mae:62.7,bias:-62.7,n:6},
+  {file:"26-02-06_gegi_1_no14",fcs:324,lw:115,ln:null,mae:52.0,bias:-52.0,n:5},
+  {file:"26-02-06_Jigesa_2_no15",fcs:432,lw:108,ln:108,mae:39.5,bias:-39.5,n:8},
+  {file:"26-02-12_Yirgacheffee-BG_no16",fcs:464,lw:110,ln:108,mae:38.5,bias:-21.1,n:26},
+  {file:"26-02-12_Jigesa_no17",fcs:455,lw:104,ln:null,mae:32.5,bias:-0.9,n:13},
+  {file:"26-02-12_Magarrissa-Tulise_no18",fcs:471,lw:null,ln:null,mae:null,bias:null,n:0},
+  {file:"26-02-18_brg_no19",fcs:407,lw:111,ln:74,mae:45.2,bias:-31.2,n:20},
+  {file:"26-02-18_sidra_no20",fcs:418,lw:73,ln:null,mae:25.0,bias:-25.0,n:1},
+  {file:"26-02-27_Magarrissa-Tulise_no21",fcs:401,lw:96,ln:null,mae:26.3,bias:6.8,n:9},
+  {file:"26-03-08_gigesa_no22",fcs:426,lw:97,ln:null,mae:26.0,bias:-21.6,n:10},
+  {file:"26-03-08_gotiti_no10",fcs:452,lw:118,ln:101,mae:54.1,bias:-54.1,n:15},
+  {file:"26-03-08_gotiti_no24",fcs:452,lw:118,ln:101,mae:54.1,bias:-54.1,n:15},
+  {file:"26-03-08_ma_no23",fcs:472,lw:10,ln:null,mae:43.0,bias:43.0,n:1},
+  {file:"26-03-09_gigesa_no26",fcs:445,lw:109,ln:55,mae:45.4,bias:-37.3,n:23},
+  {file:"26-03-09_gotiti_no25",fcs:458,lw:null,ln:null,mae:null,bias:null,n:0},
+  {file:"26-03-09_suica_no27",fcs:446,lw:118,ln:118,mae:81.7,bias:-81.7,n:3},
+  {file:"26-03-10_suica1_no28",fcs:481,lw:82,ln:44,mae:19.2,bias:6.3,n:9},
+  {file:"26-03-10_suica2_no29",fcs:487,lw:null,ln:null,mae:null,bias:null,n:0},
+  {file:"26-03-18_chiroso_no32",fcs:436,lw:62,ln:null,mae:22.8,bias:6.0,n:5},
+  {file:"26-03-18_gigesa_no31",fcs:412,lw:102,ln:85,mae:32.9,bias:-15.3,n:40},
+  {file:"26-03-18_gotiti_no30",fcs:414,lw:97,ln:15,mae:26.8,bias:-1.9,n:24},
+  {file:"reference",fcs:413,lw:123,ln:null,mae:61.1,bias:-61.1,n:10},
+];
+
+// ─── Table ───────────────────────────────────────────────────────────────
+const tbody = document.getElementById('tableBody');
+DATA.forEach(d => {
+  const hasW = d.lw !== null;
+  const hasN = d.ln !== null;
+  const level = hasN ? 'WARN' : (hasW ? 'WATCH' : 'NONE');
+  const badgeCls = {WARN:'badge-warn', WATCH:'badge-watch', NONE:'badge-none'}[level];
+  const maeClass = d.mae == null ? 'na' : d.mae <= 20 ? 'good' : d.mae <= 35 ? 'ok' : d.mae <= 55 ? 'warn' : 'bad';
+  const biasStr = d.bias == null ? '---' : (d.bias >= 0 ? '+' : '') + d.bias.toFixed(1) + 's';
+  const biasClass = d.bias == null ? 'na' : Math.abs(d.bias) <= 15 ? 'good' : Math.abs(d.bias) <= 35 ? 'ok' : 'warn';
+  tbody.innerHTML += `<tr>
+    <td>${d.file}</td>
+    <td>${d.fcs}s</td>
+    <td><span class="badge ${badgeCls}">${level}</span></td>
+    <td class="${hasW && d.lw > 30 ? 'good' : hasW ? 'warn' : 'na'}">${d.lw !== null ? d.lw+'s' : '---'}</td>
+    <td class="${hasN ? 'yellow' : 'na'}">${d.ln !== null ? d.ln+'s' : '---'}</td>
+    <td class="${maeClass}">${d.mae !== null ? d.mae.toFixed(1)+'s' : '---'}</td>
+    <td class="${biasClass}">${biasStr}</td>
+    <td class="${d.n > 0 ? '' : 'na'}">${d.n}</td>
+  </tr>`;
+});
+
+// ─── Charts ──────────────────────────────────────────────────────────────
+const cfg = {
+  plugins: { legend: { display: false } },
+  scales: {
+    x: { ticks: { color: '#6b7280', font: { size: 10 } }, grid: { color: '#1a1a28' } },
+    y: { ticks: { color: '#6b7280', font: { size: 10 } }, grid: { color: '#1a1a28' } },
+  }
+};
+
+// 1. Error distribution
+new Chart(document.getElementById('errDist'), {
+  type: 'bar',
+  data: {
+    labels: ['0–15s\\n(Target)', '15–30s', '30–60s', '>60s'],
+    datasets: [{
+      data: [16.9, 24.7, 37.8, 20.6],
+      backgroundColor: ['#22c55e', '#ffd600', '#fb923c', '#ef4444'],
+      borderWidth: 0,
+    }]
+  },
+  options: { ...cfg, plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ctx.raw + '%' } } },
+    scales: { ...cfg.scales, y: { ...cfg.scales.y, ticks: { ...cfg.scales.y.ticks, callback: v => v+'%' } } }
+  }
+});
+
+// 2. MAE per file (only those with predictions)
+const maeData = DATA.filter(d => d.mae !== null).map(d => ({ x: d.file.replace(/.*_no/,'no'), y: d.mae }));
+new Chart(document.getElementById('maeBar'), {
+  type: 'bar',
+  data: {
+    labels: maeData.map(d => d.x),
+    datasets: [{
+      data: maeData.map(d => d.y),
+      backgroundColor: maeData.map(d => d.y <= 20 ? '#22c55e' : d.y <= 35 ? '#ffd600' : d.y <= 55 ? '#fb923c' : '#ef4444'),
+      borderWidth: 0,
+    }]
+  },
+  options: {
+    ...cfg,
+    plugins: { legend: { display: false }, annotation: {} },
+    scales: { ...cfg.scales, y: { ...cfg.scales.y, ticks: { ...cfg.scales.y.ticks, callback: v => v+'s' } } }
+  }
+});
+
+// 3. WATCH lead time histogram
+const leads = DATA.filter(d => d.lw !== null).map(d => d.lw);
+const buckets = { '0–30s': 0, '30–60s': 0, '60–90s': 0, '90–120s': 0, '120s+': 0 };
+leads.forEach(l => {
+  if      (l < 30)  buckets['0–30s']++;
+  else if (l < 60)  buckets['30–60s']++;
+  else if (l < 90)  buckets['60–90s']++;
+  else if (l < 120) buckets['90–120s']++;
+  else              buckets['120s+']++;
+});
+new Chart(document.getElementById('leadHist'), {
+  type: 'bar',
+  data: {
+    labels: Object.keys(buckets),
+    datasets: [{
+      label: 'Profiles',
+      data: Object.values(buckets),
+      backgroundColor: '#00e5ff44',
+      borderColor: '#00e5ff',
+      borderWidth: 1,
+    }]
+  },
+  options: { ...cfg, plugins: { legend: { display: false } } }
+});
+
+// 4. Bias distribution
+const biases = DATA.filter(d => d.bias !== null).map(d => d.bias);
+const bBuckets = { '<−60s': 0, '−60 to −30s': 0, '−30 to 0s': 0, '0 to +30s': 0, '>+30s': 0 };
+biases.forEach(b => {
+  if      (b < -60) bBuckets['<−60s']++;
+  else if (b < -30) bBuckets['−60 to −30s']++;
+  else if (b < 0)   bBuckets['−30 to 0s']++;
+  else if (b < 30)  bBuckets['0 to +30s']++;
+  else              bBuckets['>+30s']++;
+});
+new Chart(document.getElementById('biasDist'), {
+  type: 'bar',
+  data: {
+    labels: Object.keys(bBuckets),
+    datasets: [{
+      data: Object.values(bBuckets),
+      backgroundColor: ['#ef4444','#fb923c','#ffd600','#22c55e','#a855f7'],
+      borderWidth: 0,
+    }]
+  },
+  options: {
+    ...cfg,
+    plugins: { legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ctx.raw + ' profiles' } }
+    }
+  }
+});
+</script>
+</body>
+</html>

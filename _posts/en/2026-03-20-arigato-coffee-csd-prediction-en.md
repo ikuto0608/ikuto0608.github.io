@@ -38,7 +38,7 @@ As a result of backtesting using dozens of accumulated past roasting logs (`.alo
 
 Although the lead time varies depending on the bean's moisture content and batch size, it provides a sufficient time buffer to prepare yourself that "it's going to crack soon."
 
-<iframe src="/files/csd-backtest-result.html" width="100%" height="900" frameborder="0" style="border:1px solid #2a2a3a; border-radius: 8px; margin: 2rem 0; background: #0a0a0f;"></iframe>
+<iframe src="/files/csd-backtest-result-en.html" width="100%" height="900" frameborder="0" style="border:1px solid #2a2a3a; border-radius: 8px; margin: 2rem 0; background: #0a0a0f;"></iframe>
 
 ## Current Status: Still Just the Beginning
 
