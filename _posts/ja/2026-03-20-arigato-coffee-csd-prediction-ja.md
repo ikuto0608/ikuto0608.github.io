@@ -2,8 +2,8 @@
 layout:     post
 title:      "1ハゼは「予測」できるか？——複雑系物理学とAIで挑む焙煎の臨界点"
 date:       2026-03-20 12:00:00 +0900
-summary:    "ARIGATO COFFEE: Mission Controlの1ハゼ予兆検知機能。CSD（臨界減速）理論とAIを用いて、焙煎の臨界点をデータで予測する「フェーズ2：フィールドテスト」の実録。"
-categories: engineering data-science coffee
+summary:    "ARIGATO COFFEE: 1ハゼ予兆検知機能。CSD（臨界減速）理論とAIを用いて、焙煎の臨界点をデータで予測できるのか"
+categories: data-science coffee roasting
 lang: ja
 ref: arigato-coffee-csd-prediction
 ---

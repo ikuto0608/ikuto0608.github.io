@@ -2,8 +2,8 @@
 layout:     post
 title:      "Can First Crack Be Predicted? —— Challenging the Tipping Point of Roasting with Complex Systems Physics and AI"
 date:       2026-03-20 12:00:00 +0900
-summary:    "ARIGATO COFFEE: Mission Control's First Crack pre-detection feature. An account of predicting the tipping point of roasting using data, CSD (Critical Slowing Down) theory, and AI."
-categories: engineering data-science coffee
+summary:    "ARIGATO COFFEE: First Crack pre-detection feature. An account of predicting the tipping point of roasting using data, CSD (Critical Slowing Down) theory, and AI."
+categories: data-science coffee roasting
 lang: en
 ref: arigato-coffee-csd-prediction
 ---
