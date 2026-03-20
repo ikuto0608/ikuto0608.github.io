@@ -31,6 +31,22 @@ body {
           box-sizing: border-box;
      -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $font-family;
+  position: relative;
+
+  &::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    z-index: 9999;
+    pointer-events: none;
+  }
 
   /* Loading Effect */
   &.loading {
@@ -75,13 +91,28 @@ body {
   color: #fff;
   border: 4px solid #000;
   box-shadow: 4px 4px 0 #000;
-  padding: 8px 16px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 24px;
+  text-align: center;
+  padding: 0;
   text-decoration: none;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: $heading-font-family;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
   cursor: pointer;
+  transition: all 0.1s;
+
+  .btn-text {
+    display: none;
+  }
+
+  &::before {
+    content: "A";
+    font-size: 14px;
+  }
 
   &:hover {
     color: #fff;
@@ -91,7 +122,7 @@ body {
   }
 
   &:active {
-    transform: translate(4px, 4px);
+    transform: scale(0.9);
     box-shadow: 0 0 0 #000;
   }
 }

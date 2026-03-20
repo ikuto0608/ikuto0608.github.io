@@ -15,22 +15,32 @@ code {
 }
 
 pre {
-  border: 0;
+  border: 4px double $border-neon;
   line-height: 1.11;
   overflow-x: scroll;
   background-color: $pre-background-color;
+  padding: 2.5rem 1rem 1rem 1rem;
+  position: relative;
+  counter-reset: line-numbering;
+  white-space: pre;
+  overflow-x: auto;
+  word-break: inherit;
+  word-wrap: inherit;
+
+  &::before {
+    content: "STATUS: SOURCE_CODE_LOADED";
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    color: $accent-green;
+    font-family: $heading-font-family;
+    font-size: 0.7rem;
+    opacity: 0.8;
+  }
 }
 
 .highlight .p {
   line-height: 1;
-}
-
-pre {
-    counter-reset: line-numbering;
-    white-space: pre;
-    overflow-x: auto;
-    word-break: inherit;
-    word-wrap: inherit;
 }
 pre a::before {
   content: counter(line-numbering);

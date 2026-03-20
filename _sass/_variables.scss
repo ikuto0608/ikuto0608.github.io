@@ -1,10 +1,10 @@
 // Typography
 $base-font-size: 14px !default;
 $bold-font-weight: bold !default;
-$font-family: 'Aldrich', sans-serif !default;
+$font-family: 'Inter', 'Noto Sans JP', sans-serif !default;
 $line-height: 1.5 !default;
-$heading-font-family: 'Quantico', sans-serif !default;
-$heading-font-weight: 900 !default;
+$heading-font-family: 'Press Start 2P', 'DotGothic16', cursive !default;
+$heading-font-weight: normal !default;
 $heading-line-height: 1.25 !default;
 $monospace-font-family: Consolas, monospace !default;
 $h1: 1.9rem !default;
@@ -33,13 +33,14 @@ $viewport-medium: 48em;
 $viewport-large: 64em;
 
 // Colors
-$black: #27272b !default;
+$black: #0f051a !default;
+$white: #e0e0e0 !default;
 $blue: #0076df !default;
 $red: #dc4850 !default;
-$green: #86C166 !default;
+$green: #00ff41 !default;
 $yellow: #efcc00 !default;
 $orange: #ffcc22 !default;
-$purple: #f92080 !default;
+$purple: #ff00ff !default;
 $pink: #dc38ab !default;
 $turquoise: #43d4b4 !default;
 $dark-blue: #00369f !default;
@@ -47,7 +48,7 @@ $dark-green: #00ab37 !default;
 $dark-green: #009f06 !default;
 $light-pink: #ffdddd !default;
 $light-green: #ddffdd !default;
-$dark-gray: #333 !default;
+$dark-gray: #1a102e !default;
 $dark-mid-gray: #555 !default;
 $mid-gray: #777 !default;
 $light-gray: #ccc !default;
@@ -56,6 +57,14 @@ $darken-1: rgba(#000,.0625) !default;
 $darken-2: rgba(#000,.125) !default;
 $darken-3: rgba(#000,.25) !default;
 $darken-4: rgba(#000,.5) !default;
+
+// Theme Colors
+$bg-color: $black !default;
+$text-color: $white !default;
+$card-bg: $dark-gray !default;
+$accent-green: $green !default;
+$accent-magenta: $purple !default;
+$border-neon: #3f2d5e !default;
 
 // Breakpoints
 $breakpoint-md: '(min-width: 52em)';
@@ -83,9 +92,9 @@ $form-field-padding-y: .5rem !default;
 $form-field-padding-x: .5rem !default;
 
 // Borders
-$border-color: $light-gray !default;
-$border-width: 1px !default;
-$border-radius: 3px !default;
+$border-color: $border-neon !default;
+$border-width: 2px !default;
+$border-radius: 0px !default;
 
 // Forms
 $form-field-font-size: 1rem;
@@ -94,8 +103,8 @@ $form-field-padding-y: .5rem;
 $form-field-padding-x: .5rem;
 
 // Code
-$pre-border-radius: .5rem;
-$pre-background-color: #fafafa;
+$pre-border-radius: 0;
+$pre-background-color: #000;
 $hljs-comment: $mid-gray;
 $hljs-keyword: $pink;
 $hljs-name: $dark-gray;
