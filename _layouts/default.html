@@ -71,6 +71,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           }
         });
       }
+
+      // Open external links in a new tab
+      document.querySelectorAll('a').forEach(function(link) {
+        if (link.hostname && link.hostname !== location.hostname) {
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener noreferrer');
+        }
+      });
     });
   </script>
 </body>
