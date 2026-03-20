@@ -23,7 +23,7 @@ In coffee roasting, the "first crack," where the cellular structure of the bean 
 
 When I asked Gemini about it, it suggested the **CSD (Critical Slowing Down) theory**, a concept used in complex systems science such as meteorology and ecology. It sounded fascinating.
 
-According to CSD theory, "just before a system undergoes a sudden change (phase transition), a **delay in recovery**, where the system struggles to return to its original state, occurs." We can overlay this concept onto the phase transition leading up to the first crack in the roasting process.
+According to CSD theory, "just before a system undergoes a sudden change (phase transition), a **delay in recovery**, where the system struggles to return to its original state, occurs." I can overlay this concept onto the phase transition leading up to the first crack in the roasting process.
 
 ## Catching the Signs: Autocorrelation and Variance
 
@@ -38,7 +38,7 @@ The moment these indicators exceed a certain threshold, an alert is triggered, s
 
 ## Verification Data: Backtesting with Past Logs
 
-As a result of backtesting using dozens of accumulated past roasting logs (`.alog`, etc.), we've seen that this CSD algorithm can detect a clear sign with decent accuracy, **30 to 120 seconds before the actual first crack occurs (lead time)**. Also, Claude analyzes the data instantly, which is incredibly convenient.
+As a result of backtesting using dozens of accumulated past roasting logs (`.alog`, etc.), I've seen that this CSD algorithm can detect a clear sign with decent accuracy, **30 to 120 seconds before the actual first crack occurs (lead time)**. Also, Claude analyzes the data instantly, which is incredibly convenient.
 
 Although the lead time varies depending on the bean's moisture content and batch size, it provides a sufficient time buffer to prepare yourself that "it's going to crack soon."
 
@@ -46,7 +46,7 @@ Although the lead time varies depending on the bean's moisture content and batch
 
 ## Current Status: Still Just the Beginning
 
-While the backtesting showed promising results, we are still very much in the experimental stage. I want to continue roasting to find the perfect balance.
+While the backtesting showed promising results, I am still very much in the experimental stage. I want to continue roasting to find the perfect balance.
 
 ---
 
