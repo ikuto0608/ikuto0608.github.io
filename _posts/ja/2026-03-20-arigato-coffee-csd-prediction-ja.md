@@ -8,9 +8,9 @@ lang: ja
 ref: arigato-coffee-csd-prediction
 ---
 
-<img src="/images/bullet-r1.jpg" alt="Aillio Bullet R1" width="100%" style="border-radius: 8px; margin-bottom: 2rem;">
+<img src="/images/bullet-r1.jpg" alt="Aillio Bullet R1 V2" width="100%" style="border-radius: 8px; margin-bottom: 2rem;">
 
-ここ数年、手網焙煎にはじまり去年から家におけるコンパクトな焙煎機[Aillio](https://aillio.com/)（Aillio Bullet R1）を購入して珈琲豆を焙煎している。本記事の検証で紹介するデータもすべて、この **Aillio Bullet R1** の焙煎ログを使用している。
+ここ数年、手網焙煎にはじまり去年から家におけるコンパクトな焙煎機[Aillio](https://aillio.com/)（Aillio Bullet R1 V2）を購入して珈琲豆を焙煎している。本記事の検証で紹介するデータもすべて、この **Aillio Bullet R1 V2** の焙煎ログを使用している。
 
 [Aillio](https://aillio.com/)には専用の焙煎ログアプリの[RoasTime](https://roastime.aillio.com/)があるが、自由の幅の多い[Artisan](https://artisan-scope.org/)に乗り換えてからWebsocketでリアルタイムに焙煎ログを飛ばせることを知る。
 とてもおもしろそうなので、Websocketで飛ばしたログをリアルタイムに表示する焙煎実況アプリを作ってみることにした。
