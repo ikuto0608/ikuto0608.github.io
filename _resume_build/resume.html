@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>resume</title>
+<style>
+  @page {
+    size: Letter;
+    margin: 0.45in 0.75in 0.45in 0.75in;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: #222;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.35;
+    -webkit-font-smoothing: antialiased;
+  }
+  .name {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: 400;
+    margin: 0 0 4pt 0;
+    letter-spacing: 0.2pt;
+  }
+  .contact {
+    text-align: center;
+    font-size: 9pt;
+    margin-bottom: 18pt;
+    color: #333;
+  }
+  .contact a {
+    color: #1a73e8;
+    text-decoration: underline;
+  }
+  h2.section {
+    font-size: 13pt;
+    font-weight: 400;
+    margin: 14pt 0 8pt 0;
+    padding-bottom: 2pt;
+    border-bottom: 0.6pt solid #555;
+  }
+  .job-head {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.3pt;
+    margin-top: 8pt;
+    margin-bottom: 1pt;
+  }
+  .job-head .company { text-decoration: none; }
+  .job-desc {
+    font-size: 8.5pt;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.2pt;
+    margin: 0 0 3pt 0;
+  }
+  .role {
+    margin: 0;
+  }
+  ul.bullets {
+    list-style: none;
+    margin: 0 0 0 0;
+    padding-left: 1em;
+  }
+  ul.bullets li {
+    margin: 0;
+    padding: 0;
+  }
+  ul.bullets li::before {
+    content: "- ";
+    margin-left: -1em;
+  }
+  .tech {
+    margin: 1pt 0 0 0;
+  }
+  .skills p { margin: 1pt 0; }
+  .project-name {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.3pt;
+    margin: 6pt 0 1pt 0;
+  }
+  .project-body { margin-left: 0; }
+  .project-meta {
+    margin: 0 0 0 1em;
+    font-size: 10pt;
+  }
+  a { color: #1a73e8; }
+</style>
+</head>
+<body>
+
+<h1 class="name">Ikuto Yata</h1>
+<div class="contact">
+  &lt; <a href="mailto:ikuto0608@me.com">ikuto0608@me.com</a> &gt;&lt;
+  <a href="https://ikuto0608.github.io/about/">ikuto0608.github.io/about/</a> &gt;&lt;
+  <a href="https://linkedin.com/in/ikutoyata/">linkedin.com/in/ikutoyata/</a> &gt;
+</div>
+
+<h2 class="section">Work Experience</h2>
+
+<p class="job-head"><span class="company">SMARTHR</span>, JAPAN, JAPAN &mdash; 08/2020 -&gt; PRESENT</p>
+<p class="job-desc">SMARTHR makes HR management easier such as automating procedures related to social insurance, managing engagement surveys.</p>
+<p class="role">&gt; Software engineer</p>
+<ul class="bullets">
+  <li>Platform development for HR products with a multi-product architecture</li>
+</ul>
+<p class="tech">Technologies used: [&ldquo;Ruby on Rails&rdquo;, &ldquo;Next.js&rdquo;, &ldquo;Apollo Federation&rdquo;, &ldquo;Trino&rdquo;]</p>
+
+<p class="job-head"><span class="company">RISE PEOPLE</span>, VANCOUVER, CANADA &mdash; 03/2017 -&gt; 05/2020</p>
+<p class="job-desc">Rise unifies HR + benefits + payroll into a simplified, personalized, all-in-one platform.</p>
+<p class="role">&gt; Software developer</p>
+<ul class="bullets">
+  <li>Developed and maintained apps based on microservices architecture using AWS EC2 with SNS/SQS subscription</li>
+  <li>Data stored in Postgres and Redis for cache</li>
+  <li>Collaborated by code reviews</li>
+</ul>
+<p class="tech">Technologies used: [&ldquo;Ruby on Rails&rdquo;, &ldquo;AngularJS 2&rdquo;, &ldquo;Docker&rdquo;, &ldquo;AWS&rdquo;, &ldquo;Terraform&rdquo;, &ldquo;Postgres&rdquo;, &ldquo;Redis&rdquo;, &ldquo;Github&rdquo;]</p>
+
+<p class="job-head"><span class="company">HAPPY ELEMENTS COMPANY</span>, KYOTO, JAPAN &mdash; 05/2015 -&gt; 12/2015</p>
+<p class="job-desc">Happy Elements makes social mobile games</p>
+<p class="role">&gt; Backend developer</p>
+<ul class="bullets">
+  <li>Developed administration view</li>
+  <li>Collaborated by code reviews</li>
+  <li>Maintained a rails app which had well scaled data store with MySQL for RDB and Redis/Memcached for cache</li>
+</ul>
+<p class="tech">Technologies used: [&ldquo;Ruby on Rails&rdquo;, &ldquo;MySQL&rdquo;, &ldquo;Redis&rdquo;, &ldquo;Memcached&rdquo;, &ldquo;Github&rdquo;]</p>
+
+<p class="job-head"><span class="company">IBM JAPAN SERVICES COMPANY</span>, JAPAN &mdash; 04/2012 -&gt; 04/2015</p>
+<p class="role">&gt; Developer</p>
+<ul class="bullets">
+  <li>Maintained a web app to manage 3D design data for manufacturing company.</li>
+</ul>
+<p class="tech">Technologies used: [&ldquo;C++&rdquo;, &ldquo;ActiveX&rdquo;, &ldquo;Java&rdquo;]</p>
+
+<h2 class="section">Education</h2>
+
+<p class="job-head">ITD CANADA, VANCOUVER, CANADA &mdash; 01/2016 -&gt; 03/2018</p>
+<p class="role">&gt; General Programming Diploma</p>
+
+<p class="job-head">GAKUSHUIN UNIVERSITY, TOKYO, JAPAN &mdash; 04/2008 -&gt; 03/2012</p>
+<p class="role">&gt; BS in Physics</p>
+
+<h2 class="section">Own Projects</h2>
+
+<p class="project-name">ARIGATO COFFEE</p>
+<p class="role">&gt; Online specialty coffee shop with an interactive 2D cafe experience, plus a companion roasting app.</p>
+<p class="project-meta">[&ldquo;Next.js&rdquo;, &ldquo;React&rdquo;, &ldquo;TypeScript&rdquo;, &ldquo;Phaser.js&rdquo;, &ldquo;Shopify Storefront API&rdquo;, &ldquo;GraphQL&rdquo;, &ldquo;Socket.io&rdquo;, &ldquo;Tailwind CSS&rdquo;]</p>
+<p class="project-meta">[Site] <a href="https://arigato.coffee/">https://arigato.coffee/</a> &nbsp; [Roastery] <a href="https://roastery.arigato.coffee/">https://roastery.arigato.coffee/</a></p>
+
+</body>
+</html>
