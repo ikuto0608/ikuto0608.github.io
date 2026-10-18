@@ -9,6 +9,9 @@ ref: arigato-coffee-csd-prediction
 image: /images/arigato-coffee-roastery.png
 ---
 
+> **Update (October 2026):** After re-checking with many more roast logs, the CSD signal described in this post turned out not to respond to first crack or to changes in heat at all. It was noise from the statistics of a short window and the 0.1 °C temperature steps; the hits in the backtest were most likely chance. I now use a different cue (how far the temperature has risen since the turning point). I'm keeping this post as a record.
+
+
 <img src="/images/bullet-r1.jpg" alt="Aillio Bullet R1 V2" width="100%" style="border-radius: 8px; margin-bottom: 2rem;">
 
 Over the past few years, having started with a hand roaster, I purchased a compact home roaster, [Aillio](https://aillio.com/) (Aillio Bullet R1 V2), last year and have been roasting coffee beans. All the data and logs used for the verification in this article are derived from this **Aillio Bullet R1 V2**.
