@@ -9,6 +9,9 @@ ref: arigato-coffee-csd-prediction
 image: /images/arigato-coffee-roastery.png
 ---
 
+> **2026-10 追記**: その後、焙煎ログを増やして検証し直したところ、この記事で紹介した CSD の予兆は、1 ハゼにも火の操作にも反応しておらず、短い窓の統計的な揺れと温度の刻み（0.1℃）から生まれた雑音だったと分かりました。バックテストで当たって見えたのは偶然と考えています。いまは別の手がかり（底からの温度の上がり幅）を使っています。記事は記録として残します。
+
+
 <img src="/images/bullet-r1.jpg" alt="Aillio Bullet R1 V2" width="100%" style="border-radius: 8px; margin-bottom: 2rem;">
 
 ここ数年、手網焙煎にはじまり去年から家におけるコンパクトな焙煎機[Aillio](https://aillio.com/)（Aillio Bullet R1 V2）を購入して珈琲豆を焙煎している。本記事の検証で紹介するデータもすべて、この **Aillio Bullet R1 V2** の焙煎ログを使用している。
